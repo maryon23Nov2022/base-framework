@@ -1,0 +1,3 @@
+Optimistic locking
+Paging function
+The role of ContentType is still unclear (whether it is used to constrain the server or browser?). And the coded character set of response in the default configuration is uncertain

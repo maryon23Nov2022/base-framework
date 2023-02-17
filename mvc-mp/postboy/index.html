@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <label for="id">
+            id:
+            <input type="number" id="id">
+        </label>
+        <label for="username">
+            username:
+            <input type="text" id="username" minlength="3" maxlength="16">
+        </label>
+        <label for="password">
+            password:
+            <input type="password" id="password" minlength="6" maxlength="16">
+        </label>
+        <div>
+            <label>
+                administrator
+                <input type="radio" name="identity" value="administrator">
+            </label>
+            <label>
+                teacher
+                <input type="radio" name="identity" value="teacher">
+            </label>
+            <label>
+                student
+                <input type="radio" name="identity" value="student" checked="checked">
+            </label>
+        </div>
+        <input type="button" id="GET" value="getSubmit">
+        <input type="button" id="POST" value="postSubmit">
+        <input type="button" id="PUT" value="putSubmit">
+        <input type="button" id="DELETE" value="deleteSubmit">
+    </body>
+</html>
+
+<script type="module">
+    import { listener } from "./index.js";
+    listener();
+</script>
