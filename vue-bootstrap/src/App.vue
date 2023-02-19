@@ -1,14 +1,11 @@
 <template>
     <div id="app">
         <NavBar/>
+        <router-view></router-view>
         <ul>
             <li>this is the 1st li</li>
             <li>this is the 2nd li</li>
             <li>this is the 3rd li</li>
-            <li>this is the 4th li</li>
-            <li>this is the 5th li</li>
-            <li>this is the 6th li</li>
-            <li>this is the 7th li</li>
             <li>type = {{ job.type }}</li>
             <li>salary = {{ job.salary }}</li>
             <li>gender.value = {{ gender }}</li>
