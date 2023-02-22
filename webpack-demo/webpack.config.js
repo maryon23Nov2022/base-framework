@@ -34,8 +34,8 @@ module.exports = {
             
             { test: /\.jpg|png|gif$/, use: ["url-loader?limit=34597"] },
             //In this case, limit option used for resolving whether the img should be encoded to Base64 format.
-            //When the image size greater than limit value encoding won't be invoked(and the "file-loader" is needed).
-            
+            //If the file size is equal or greater than the limit file-loader will be used (by default)
+
             { test: /\.js$/, use: ["babel-loader"], exclude: /node_modules/ }
         ]
     },

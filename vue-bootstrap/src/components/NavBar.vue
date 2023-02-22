@@ -82,7 +82,6 @@
 </div>
 </template>
 
-
 <style scoped>
 .board{
     display: flex;
