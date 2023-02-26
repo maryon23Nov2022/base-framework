@@ -19,32 +19,8 @@ module.exports = {
     module: {
         rules: [
             { test: /\.css$/, use: ["style-loader", "css-loader"] },
-            { test: /\.jpg|png|gif$/, use: ["url-loader"] },
-            { test: /\.vue$/, use: ["vue-loader"] },
-            // {
-            //     test: /\.(scss)$/,
-            //     use: [
-            //       {
-            //         loader: 'style-loader'
-            //       },
-            //       {
-            //         loader: 'css-loader'
-            //       },
-            //       {
-            //         loader: 'postcss-loader',
-            //         options: {
-            //           postcssOptions: {
-            //             plugins: () => [
-            //               require('autoprefixer')
-            //             ]
-            //           }
-            //         }
-            //       },
-            //       {
-            //         loader: 'sass-loader'
-            //       }
-            //     ]
-            // }
+            { test: /\.jpg|png|gif$/, use: ["url-loader?limit=65536"] },
+            { test: /\.vue$/, use: ["vue-loader"] }
         ]
     },
     plugins: [

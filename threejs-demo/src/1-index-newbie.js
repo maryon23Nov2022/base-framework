@@ -1,3 +1,5 @@
+require.context("../public", true, /.*/, "sync");
+
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
@@ -19,3 +21,5 @@ console.log(renderer);
 document.body.appendChild(renderer.domElement);
 
 renderer.render(scene, camera);
+
+console.log("newbie added");

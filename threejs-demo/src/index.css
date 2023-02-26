@@ -1,0 +1,10 @@
+#canvas-container{
+    position: fixed;
+    z-index: -1;
+}
+.menu-item{
+    color:white
+}
+.page{
+    color:white
+}
