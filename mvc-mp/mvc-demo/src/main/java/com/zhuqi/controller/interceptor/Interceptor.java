@@ -17,6 +17,7 @@ public class Interceptor implements HandlerInterceptor{
         response.setHeader("Access-Control-Allow-Credentials", "true");
 //        response.setContentType("text/plain;charset=UTF-8");
         System.out.printf("preHandle executed\n");
+        System.out.printf("%s: %s\n", "Interceptor", request.getContentType());
         return true;        //return false to intercept request and abort process
     }
 }

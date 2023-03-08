@@ -65,6 +65,7 @@ for(let i = 0; i < positionArray.length; i += 3){
     // x = Math.asin((Math.random() - 0.5) * 2) / Math.PI * 2 * Math.sqrt(radiusSquare);
     // y = Math.asin((Math.random() - 0.5) * 2) / Math.PI * 2 * Math.sqrt(radiusSquare - x * x);
     // z = Math.asin((Math.random() - 0.5) * 2) / Math.PI * 2 * Math.sqrt(radiusSquare - x * x - y * y);
+    // Perhaps it's a wrong formula
   // }
   positionArray[i] = x, positionArray[i + 1] = y, positionArray[i + 2] = z;
 }

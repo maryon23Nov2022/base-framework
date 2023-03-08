@@ -12,6 +12,6 @@ import org.springframework.stereotype.Controller;
         )
 )
 @PropertySource(value = {"classpath:jdbc.properties"})
-@Import(value = {JdbcConfig.class, MybatisPlusConfig.class})
+@Import(value = {JdbcConfig.class, MybatisPlusConfig.class, MultipartResolverConfig.class})
 public class SpringConfig{
 }

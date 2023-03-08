@@ -1,3 +1,5 @@
+require.context("../public", true, /.*/, "sync");
+
 import * as THREE from "three";
 import { DoubleSide } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
@@ -25,11 +27,11 @@ spotLight.distance = 16;
 spotLight.penumbra = 1;
 scene.add(spotLight);
 
-const pointLight = new THREE.PointLight(0xff0000, 32);
+const pointLight = new THREE.PointLight(0xff0000, 16);
 pointLight.castShadow = true;
 pointLight.distance = 16;
 pointLight.decay = 2;
-pointLight.penumbra = 1;
+// pointLight.penumbra = 1;
 
 const bulb = new THREE.Mesh(
     new THREE.SphereGeometry(0.1, 16, 16),

@@ -4,14 +4,14 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
     mode: "development",
     devtool: "eval-source-map",
-    entry: path.join(__dirname, "./src/index.js"),
+    entry: path.join(__dirname, "./src/8-index-light.js"),
     // entry: path.join(__dirname, "./src/1-index-newbie.js"),
     output: {
         path: path.join(__dirname, "./dist"),
         filename: "main.js"
     },
     devServer: {
-        port: 3000,
+        port: 3001,
         static: {
             directory: path.join(__dirname, "./dist")
         }

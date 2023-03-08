@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <div>
+            <label>
+                Choose file to upload<br>
+                <input id="fileChosen" name="fileChosen" type="file" accept=".glb,.jpg,.png">
+            </label>
+        </div>
+        <div>
+          <label>
+            Choose image to show<br>
+            <input id="imgChosen" name="imgChosen" type="file" accept=".jpg,.png">
+          </label>
+        </div>
+        <div>
+            <label>
+                Model name
+                <input id="modelName" name="modelName" type="text" minlength="3" maxlength="16">
+            </label>
+        </div>
+        <div>
+            <button id="uploadModel" type="button">submit</button>
+        </div>
+    </form>
+
+    <div>
+      <button id="getImg" type="button">getImg</button>
+    </div>
+    <div style="width:128px;height:72px;background-color: aqua;">
+    </div>
+    <div>
+      <a href="http://127.0.0.1:8080/mvc_demo/files" download>asdfsaf</a>
+    </div>
+</body>
+</html>
+
+<script>
+  const send = function(data){
+      console.log("inSend: ", typeof data);
+      console.log(data);
+      $.ajax({
+          url: "http://127.0.0.1:8080/mvc_demo/files",
+          type: "POST",
+          data: data,
+          dataType: "json",
+          contentType: false,
+          processData: false,
+          success: function(resp){
+              console.log(resp);
+          },
+      });
+  }
+  const submit = function(){
+      const fileChosen = $("#fileChosen")[0].files;
+      console.log(fileChosen);
+      if(fileChosen.length === 0){
+          console.log("no file selected.");
+      } else{
+          const formData = new FormData($("#form")[0]);
+          send(formData);
+      }
+  };
+  $("#uploadModel").on("click", submit);
+</script>
+
+<script>
+  const getImg = function(){
+    $.ajax({
+        url: "http://127.0.0.1:8080/mvc_demo/files",
+        type: "GET",
+        data: {
+          id: 6
+        },
+        dataType: "json",
+        success: function(resp){
+            console.log(resp);
+        },
+    });
+  }
+
+  $("#getImg").on("click", getImg);
+</script>

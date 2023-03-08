@@ -26,6 +26,7 @@ public class UserController{
 
     @GetMapping
     public Result getUser(String req){
+        System.out.printf("%s: %s\n", "UserController", req);
         User user = JSON.parseObject(req, User.class);
         return getInfoService.getInfo(user);
     }
